@@ -34,3 +34,5 @@ C:\Users\WeCanCodeIT\documents\visual studio 2015\Projects\practicingLabels\prac
 C:\Users\WeCanCodeIT\documents\visual studio 2015\Projects\practicingLabels\practicingLabels\bin\Debug\ru\System.Windows.Interactivity.resources.dll
 C:\Users\WeCanCodeIT\documents\visual studio 2015\Projects\practicingLabels\practicingLabels\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
 C:\Users\WeCanCodeIT\documents\visual studio 2015\Projects\practicingLabels\practicingLabels\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+C:\Users\WeCanCodeIT\documents\visual studio 2015\Projects\practicingLabels\practicingLabels\bin\Debug\WpfAnimatedGif.dll
+C:\Users\WeCanCodeIT\documents\visual studio 2015\Projects\practicingLabels\practicingLabels\bin\Debug\WpfAnimatedGif.xml

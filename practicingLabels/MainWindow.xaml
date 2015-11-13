@@ -3,12 +3,13 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
         xmlns:local="clr-namespace:practicingLabels"
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" x:Class="practicingLabels.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="340" Width="480"
-        KeyDown="Window_KeyDown"
-        KeyUp="Window_KeyUp">
+        Title="Go Ninja Go Ninja Go!" Height="340" Width="480"
+        PreviewKeyDown="Window_PreviewKeyDown"
+        KeyUp="Window_KeyUp" Background="#FFD1D1D1">
     <Window.Resources>
         <Storyboard x:Key="qcf">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="joystick">
@@ -28,6 +29,12 @@
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="pushButton1">
+            <DoubleAnimation
+                Storyboard.TargetName="button1"
+                Storyboard.TargetProperty="Opacity"
+                From="0.5"
+                To="1"
+                Duration="0:0:0"/>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="button1">
                 <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
@@ -36,26 +43,56 @@
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="pushButton2">
+            <DoubleAnimation
+                Storyboard.TargetName="button2"
+                Storyboard.TargetProperty="Opacity"
+                From="0.5"
+                To="1"
+                Duration="0:0:0"/>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="button2">
                 <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="pressButton3">
+            <DoubleAnimation
+                Storyboard.TargetName="button3"
+                Storyboard.TargetProperty="Opacity"
+                From="0.5"
+                To="1"
+                Duration="0:0:0"/>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="button3">
                 <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="pressButton4">
+            <DoubleAnimation
+                Storyboard.TargetName="button4"
+                Storyboard.TargetProperty="Opacity"
+                From="0.5"
+                To="1"
+                Duration="0:0:0"/>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="button4">
                 <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="pressButton5">
+            <DoubleAnimation
+                Storyboard.TargetName="button5"
+                Storyboard.TargetProperty="Opacity"
+                From="0.5"
+                To="1"
+                Duration="0:0:0"/>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="button5">
                 <EasingDoubleKeyFrame KeyTime="0" Value="2"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="pressButton6">
+            <DoubleAnimation
+                Storyboard.TargetName="button6"
+                Storyboard.TargetProperty="Opacity"
+                From="0.5"
+                To="1"
+                Duration="0:0:0"/>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="button6">
                 <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
@@ -84,10 +121,31 @@
             <ObjectAnimationUsingKeyFrames 
     BeginTime="00:00:00" 
     Storyboard.TargetName="image"
+                RepeatBehavior="Forever"
     Storyboard.TargetProperty="(Image.Source)">
-                <DiscreteObjectKeyFrame KeyTime="0">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="ryu/crouch.gif" />
+                        <BitmapImage UriSource="ryu/crouch/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouch/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouch/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouch/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.8">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/walkb/tmp-4.gif" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
             </ObjectAnimationUsingKeyFrames>
@@ -100,27 +158,127 @@
         </Storyboard>
         <Storyboard x:Key="walkF">
             <ObjectAnimationUsingKeyFrames 
-    BeginTime="00:00:00" 
+    BeginTime="00:00:00"
+    RepeatBehavior="Forever"
     Storyboard.TargetName="image"
     Storyboard.TargetProperty="(Image.Source)">
-                <DiscreteObjectKeyFrame KeyTime="0">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="ryu/walkf.gif" />
+                        <BitmapImage UriSource="ryu/walkf/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/walkf/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/walkf/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/walkf/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/walkf/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.25">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/walkf/tmp-5.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/walkf/tmp-6.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.35">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/walkf/tmp-7.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/walkf/tmp-8.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.45">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/walkf/tmp-9.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/walkf/tmp-10.gif" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
             </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image">
-                <EasingDoubleKeyFrame KeyTime="0" Value="6"/>
-            </DoubleAnimationUsingKeyFrames>
+
         </Storyboard>
         <Storyboard x:Key="walkB">
             <ObjectAnimationUsingKeyFrames 
     BeginTime="00:00:00" 
     Storyboard.TargetName="image"
+                RepeatBehavior="Forever"
     Storyboard.TargetProperty="(Image.Source)">
-                <DiscreteObjectKeyFrame KeyTime="0">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="ryu/walkb.gif" />
+                        <BitmapImage UriSource="ryu/walkb/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/walkb/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/walkb/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/walkb/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/walkb/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.25">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/walkb/tmp-5.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/walkb/tmp-6.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.35">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/walkb/tmp-7.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/walkb/tmp-8.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.45">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/walkb/tmp-9.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/walkb/tmp-10.gif" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
             </ObjectAnimationUsingKeyFrames>
@@ -132,18 +290,110 @@
             <ObjectAnimationUsingKeyFrames 
     BeginTime="00:00:00" 
     Storyboard.TargetName="image"
-    Storyboard.TargetProperty="(Image.Source)">
-                <DiscreteObjectKeyFrame KeyTime="0">
+    Storyboard.TargetProperty="Source">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="ryu/jumpn.gif" />
+                        <BitmapImage UriSource="ryu/jumpn/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpn/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpn/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpn/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpn/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.25">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpn/tmp-5.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpn/tmp-6.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.35">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpn/tmp-7.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpn/tmp-8.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.45">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpn/tmp-9.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpn/tmp-10.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.55">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpn/tmp-11.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpn/tmp-12.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.65">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpn/tmp-13.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.7">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpn/tmp-14.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.75">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpn/tmp-15.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.8">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpn/tmp-16.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.85">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpn/tmp-17.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.9">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpn/tmp-18.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.95">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpn/tmp-19.gif" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
             </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image">
-                <EasingDoubleKeyFrame KeyTime="0" Value="6"/>
-            </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-145.5"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="-80"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="jumpF">
@@ -151,17 +401,114 @@
     BeginTime="00:00:00" 
     Storyboard.TargetName="image"
     Storyboard.TargetProperty="(Image.Source)">
-                <DiscreteObjectKeyFrame KeyTime="0">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="ryu/jumpf.gif" />
+                        <BitmapImage UriSource="ryu/jumpf/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpf/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpf/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpf/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpf/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.25">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpf/tmp-5.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpf/tmp-6.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.35">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpf/tmp-7.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpf/tmp-8.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.45">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpf/tmp-9.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpf/tmp-10.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.55">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpf/tmp-11.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpf/tmp-12.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.65">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpf/tmp-13.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.7">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpf/tmp-14.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.75">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpf/tmp-15.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.8">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpf/tmp-16.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.85">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpf/tmp-17.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.9">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpf/tmp-18.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.95">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpf/tmp-19.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpf/tmp-20.gif" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
             </ObjectAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image">
-                <EasingDoubleKeyFrame KeyTime="0" Value="57"/>
-            </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-114"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="-74"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
         <Storyboard x:Key="jumpB">
@@ -169,18 +516,2247 @@
     BeginTime="00:00:00" 
     Storyboard.TargetName="image"
     Storyboard.TargetProperty="(Image.Source)">
-                <DiscreteObjectKeyFrame KeyTime="0">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
                     <DiscreteObjectKeyFrame.Value>
-                        <BitmapImage UriSource="ryu/jumpb.gif" />
+                        <BitmapImage UriSource="ryu/jumpb/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpb/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpb/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpb/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpb/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.25">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpb/tmp-5.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpb/tmp-6.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.35">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpb/tmp-7.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpb/tmp-8.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.45">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpb/tmp-9.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpb/tmp-10.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.55">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpb/tmp-11.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpb/tmp-12.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.65">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpb/tmp-13.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.7">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpb/tmp-14.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.75">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpb/tmp-15.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.8">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpb/tmp-16.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.85">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpb/tmp-17.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.9">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpb/tmp-18.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.95">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpb/tmp-19.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/jumpb/tmp-20.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-83"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-158"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="punchL">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standlp/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standlp/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standlp/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standlp/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standlp/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="5"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="punchM">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standmp/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standmp/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standmp/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standmp/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standmp/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.25">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standmp/tmp-5.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standmp/tmp-6.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.35">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standmp/tmp-7.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="7"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="punchH">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standhp/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standhp/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standhp/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standhp/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standhp/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.25">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standhp/tmp-5.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standhp/tmp-6.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.35">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standhp/tmp-7.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standhp/tmp-8.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.45">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standhp/tmp-9.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standhp/tmp-10.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.55">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standhp/tmp-11.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standhp/tmp-11.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.65">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standhp/tmp-11.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="7"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="kickL">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standlk/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standlk/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standlk/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standlk/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standlk/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.25">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standlk/tmp-5.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="4"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="kickM">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standmk/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standmk/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standmk/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standmk/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standmk/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.25">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standmk/tmp-5.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standmk/tmp-6.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.35">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standmk/tmp-7.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standmk/tmp-8.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.45">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standmk/tmp-9.gif" />
                     </DiscreteObjectKeyFrame.Value>
                 </DiscreteObjectKeyFrame>
             </ObjectAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-244.5"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="-11"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-109.5"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="kickH">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standhk/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standhk/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standhk/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standhk/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standhk/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.25">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standhk/tmp-5.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standhk/tmp-6.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.35">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standhk/tmp-7.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standhk/tmp-8.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.45">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standhk/tmp-9.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standhk/tmp-10.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.55">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standhk/tmp-11.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standhk/tmp-12.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.65">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standhk/tmp-13.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:7">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standhk/tmp-14.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-5"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="crouchLP">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchlp/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchlp/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchlp/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchlp/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchlp/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.25">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchlp/tmp-5.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="crouchMP">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchmp/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchmp/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchmp/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchmp/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchmp/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.25">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchmp/tmp-5.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="crouchHP">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchhp/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchhp/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchhp/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchhp/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchhp/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.25">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchhp/tmp-5.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchhp/tmp-6.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.35">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchhp/tmp-7.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchhp/tmp-8.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.45">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchhp/tmp-9.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchhp/tmp-10.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-14.5"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="crouchLK">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchlk/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchlk/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchlk/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchlk/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchlk/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.25">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchlk/tmp-5.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="39"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="crouchMK">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchmk/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchmk/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchmk/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchmk/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchmk/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.25">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchmk/tmp-5.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchmk/tmp-6.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.35">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchmk/tmp-7.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchmk/tmp-8.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.45">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchmk/tmp-9.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="34.5"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="crouchHK">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchhk/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchhk/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchhk/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchhk/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchhk/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.25">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchhk/tmp-5.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchhk/tmp-6.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.35">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchhk/tmp-7.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchhk/tmp-8.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.45">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchhk/tmp-9.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchhk/tmp-10.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.55">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouchhk/tmp-11.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="36"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-8"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="stance">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    RepeatBehavior="Forever"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stance/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stance/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stance/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stance/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stance/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stance/tmp-5.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stance/tmp-6.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.7">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stance/tmp-7.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.8">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stance/tmp-8.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.9">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stance/tmp-9.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="airLP">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/airlp.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="airMP">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/airmp.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="airHP">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/airhp.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="airLK">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/airlk.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="airMK">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/airmk.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="airHK">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/airhk.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="hadokenH">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/hadoken/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/hadoken/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/hadoken/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/hadoken/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/hadoken/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.25">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/hadoken/tmp-5.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/hadoken/tmp-6.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.35">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/hadoken/tmp-7.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/hadoken/tmp-8.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.45">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/hadoken/tmp-9.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/hadoken/tmp-10.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.55">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/hadoken/tmp-11.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/hadoken/tmp-12.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.65">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/hadoken/tmp-13.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="7"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="hadokenM">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/hadoken/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/hadoken/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/hadoken/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/hadoken/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/hadoken/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.25">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/hadoken/tmp-5.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/hadoken/tmp-8.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.35">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/hadoken/tmp-9.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/hadoken/tmp-10.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.45">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/hadoken/tmp-11.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/hadoken/tmp-12.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.55">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/hadoken/tmp-13.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="7"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="hadokenL">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/hadoken/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/hadoken/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/hadoken/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/hadoken/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/hadoken/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.25">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/hadoken/tmp-8.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/hadoken/tmp-9.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.35">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/hadoken/tmp-10.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/hadoken/tmp-11.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.45">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/hadoken/tmp-12.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/hadoken/tmp-13.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="7"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="tatsuH">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.25">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-5.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-6.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.35">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-7.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-8.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.45">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-9.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-10.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.55">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-11.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-12.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.65">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-13.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.7">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-14.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.75">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-15.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.8">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-16.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.85">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-17.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.9">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-18.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.95">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-19.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-20.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-21.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-22.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-23.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-24.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.25">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-25.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-26.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-29"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-33"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="tatsuM">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.25">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-5.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-6.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.35">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-7.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-8.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.45">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-9.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-10.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.55">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-16.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-17.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.65">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-18.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.7">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-19.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.75">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-20.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.8">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-21.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.85">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-22.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.9">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-23.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.95">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-24.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-25.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-26.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-29"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-33"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="tatsuL">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.25">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-5.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-6.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.35">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-7.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-19.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.45">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-20.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-21.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.55">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-22.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-23.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.65">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-24.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.7">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-25.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.75">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/tatsu/tmp-26.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-29"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-33"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="shoryukenH">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.25">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-5.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-6.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.35">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-7.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-8.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.45">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-9.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-10.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.55">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-11.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-12.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.65">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-13.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.7">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-14.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.75">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-15.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.8">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-16.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-85"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="shoryukenM">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.25">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-5.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-6.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.35">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-10.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-11.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.45">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-12.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-13.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.55">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-14.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-15.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.65">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-16.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-85"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="shoryukenL">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.25">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-5.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-11.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.35">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-12.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-13.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.45">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-14.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-15.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.55">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/shoryu/tmp-16.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-85"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="f-mp">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/f-mp/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/f-mp/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/f-mp/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/f-mp/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/f-mp/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.25">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/f-mp/tmp-5.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/f-mp/tmp-6.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.35">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/f-mp/tmp-7.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/f-mp/tmp-8.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.45">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/f-mp/tmp-9.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/f-mp/tmp-10.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="taunt">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/taunt/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/taunt/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/taunt/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/taunt/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/taunt/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.25">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/taunt/tmp-5.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/taunt/tmp-6.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.35">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/taunt/tmp-7.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/taunt/tmp-8.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.45">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/taunt/tmp-9.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/taunt/tmp-10.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.55">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/taunt/tmp-11.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/taunt/tmp-12.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.65">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/taunt/tmp-13.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.7">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/taunt/tmp-14.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.75">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/taunt/tmp-15.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.8">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/taunt/tmp-16.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.85">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/taunt/tmp-17.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.9">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/taunt/tmp-18.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="f-hp">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/forwardhp/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/forwardhp/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/forwardhp/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/forwardhp/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/forwardhp/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.25">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/forwardhp/tmp-5.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/forwardhp/tmp-6.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.35">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/forwardhp/tmp-7.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/forwardhp/tmp-8.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.45">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/forwardhp/tmp-9.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/forwardhp/tmp-10.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.55">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/forwardhp/tmp-11.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/forwardhp/tmp-12.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.65">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/forwardhp/tmp-13.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.7">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/forwardhp/tmp-14.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="-30"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-22"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="startCrouch">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouching/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouching/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/crouching/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="stepkick">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.25">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-5.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-6.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.35">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-7.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-8.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.45">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-9.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-10.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.55">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-11.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-12.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.65">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-13.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.7">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-14.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="stepkickM">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-5.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.25">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-6.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-8.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.35">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-9.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-10.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.45">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-11.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-12.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.55">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-13.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-14.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="stepkickL">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-6.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-8.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.25">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-9.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-10.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.35">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-11.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-12.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.45">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-13.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/stepkick/tmp-14.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
         </Storyboard>
     </Window.Resources>
     <Window.Triggers>
@@ -223,8 +2799,19 @@
         <EventTrigger RoutedEvent="UIElement.MouseLeftButtonUp" SourceName="button6">
             <StopStoryboard BeginStoryboardName="pressButton6_BeginStoryboard"/>
         </EventTrigger>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource stance}"/>
+        </EventTrigger>
     </Window.Triggers>
-    <Canvas Height="340" Width="480">
+    <Canvas x:Name="canvas" Height="340" Width="480" RenderTransformOrigin="0.5,0.5">
+        <Canvas.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Canvas.RenderTransform>
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:Name="VisualStateGroup">
                 <VisualState x:Name="up"/>
@@ -234,7 +2821,7 @@
         <Polygon x:Name="polygon"
 			Points="0,0 18.75,12.5 25,25 18.75,37.5 0,50 -18.75,37.5 -25,25 -18.75,12.5 0,0"
 			Stroke="Purple"
-			StrokeThickness="2" RenderTransformOrigin="0.5,0.5" Canvas.Left="159.5" Canvas.Top="232">
+			StrokeThickness="2" RenderTransformOrigin="0.5,0.5" Canvas.Left="159.5" Canvas.Top="229">
             <Polygon.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -252,8 +2839,8 @@
 			Height="35"
 			Width="35"
 			StrokeThickness="2"
-			Opacity="0.7"
-			Stroke="Black" Canvas.Left="142" Canvas.Top="239" Fill="Red" RenderTransformOrigin="0.5,0.5" >
+			Opacity="0.85"
+			Stroke="Black" Canvas.Left="142" Canvas.Top="236" Fill="Red" RenderTransformOrigin="0.5,0.5" >
             <Ellipse.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -268,7 +2855,7 @@
 			Width="25"
 			StrokeThickness="2"
 			Opacity="0.5"
-			Stroke="Black" Canvas.Left="217" Canvas.Top="229.798" Fill="Blue" RenderTransformOrigin="0.5,0.5" >
+			Stroke="Black" Canvas.Left="217" Canvas.Top="226.798" Fill="Blue" RenderTransformOrigin="0.5,0.5" >
             <Ellipse.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -283,7 +2870,7 @@
 			Width="25"
 			StrokeThickness="2"
 			Opacity="0.5"
-			Stroke="Black" Canvas.Left="261" Canvas.Top="222.798" Fill="Blue" RenderTransformOrigin="0.5,0.5" >
+			Stroke="Black" Canvas.Left="261" Canvas.Top="219.798" Fill="Blue" RenderTransformOrigin="0.5,0.5" >
             <Ellipse.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -298,7 +2885,7 @@
 			Width="25"
 			StrokeThickness="2"
 			Opacity="0.5"
-			Stroke="Black" Canvas.Left="303" Canvas.Top="216.798" Fill="Blue" RenderTransformOrigin="0.5,0.5" >
+			Stroke="Black" Canvas.Left="303" Canvas.Top="213.798" Fill="Blue" RenderTransformOrigin="0.5,0.5" >
             <Ellipse.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -313,7 +2900,7 @@
 			Width="25"
 			StrokeThickness="2"
 			Opacity="0.5"
-			Stroke="Black" Canvas.Left="227" Canvas.Top="262" Fill="Blue" RenderTransformOrigin="0.5,0.5" >
+			Stroke="Black" Canvas.Left="227" Canvas.Top="259" Fill="Blue" RenderTransformOrigin="0.5,0.5" >
             <Ellipse.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -328,7 +2915,7 @@
 			Width="25"
 			StrokeThickness="2"
 			Opacity="0.5"
-			Stroke="Black" Canvas.Left="271" Canvas.Top="255" Fill="Blue" RenderTransformOrigin="0.5,0.5" >
+			Stroke="Black" Canvas.Left="271" Canvas.Top="252" Fill="Blue" RenderTransformOrigin="0.5,0.5" >
             <Ellipse.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -343,7 +2930,7 @@
 			Width="25"
 			StrokeThickness="2"
 			Opacity="0.5"
-			Stroke="Black" Canvas.Left="313" Canvas.Top="249" Fill="Blue" RenderTransformOrigin="0.5,0.5" >
+			Stroke="Black" Canvas.Left="313" Canvas.Top="246" Fill="Blue" RenderTransformOrigin="0.5,0.5" >
             <Ellipse.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -353,9 +2940,10 @@
                 </TransformGroup>
             </Ellipse.RenderTransform>
         </Ellipse>
-        <TextBlock x:Name="inputs" Height="30" Canvas.Left="10" TextWrapping="NoWrap" Text="Inputs:" Canvas.Top="10" Width="400" FontSize="20"
+        <TextBlock x:Name="inputs" Height="30" Canvas.Left="10" TextWrapping="NoWrap" Text="......." Canvas.Top="10" Width="431" FontFamily="SFInputs"  FontSize="25"
                    Loaded="inputs_Loaded"/>
-        <Image x:Name="image" Source="ryu/stance.gif" Canvas.Left="142" Canvas.Top="113.798" RenderTransformOrigin="0.5,0.5">
+        <Image x:Name="image" 
+               gif:ImageBehavior.AnimatedSource="ryu/stance.gif" Canvas.Left="139" Canvas.Top="86.798" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup x:Name="transformGroup">
                     <ScaleTransform/>
@@ -365,5 +2953,28 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
+        <Image x:Name="q" 
+               Source="q/stand/tmp-0.gif" Canvas.Left="568" Canvas.Top="69">
+            <Image.RenderTransform>
+                <ScaleTransform ScaleX="-1"/>
+            </Image.RenderTransform>
+        </Image>
+        <TextBlock x:Name="move" Height="100" Canvas.Left="235" TextWrapping="Wrap" FontSize="25" Canvas.Top="45" Width="235"/>
+        <TextBlock x:Name="W" Height="17.152" Canvas.Left="150.5" TextWrapping="Wrap" Text=" W" Canvas.Top="206.848" Width="24.118"/>
+        <TextBlock x:Name="A" Height="15.202" Canvas.Left="115.882" TextWrapping="Wrap" Text="A" Canvas.Top="246" Width="12.118"/>
+        <TextBlock x:Name="D" Height="15.202" Canvas.Left="191" TextWrapping="Wrap" Text=" D" Canvas.Top="246" Width="12.118"/>
+        <TextBlock x:Name="S" Height="17.152" Canvas.Left="150.5" TextWrapping="Wrap" Text="  S" Canvas.Top="285.202" Width="24.118"/>
+        <TextBlock x:Name="U" Height="17.152" Canvas.Left="223" TextWrapping="Wrap" Text="U" Canvas.Top="204.646" Width="14.118"/>
+        <TextBlock x:Name="I" Height="17.152" Canvas.Left="270" TextWrapping="Wrap" Text="I" Canvas.Top="197.646" Width="10.118"/>
+        <TextBlock x:Name="O" Height="17.152" Canvas.Left="310" TextWrapping="Wrap" Text="O" Canvas.Top="191.646" Width="10.118"/>
+        <TextBlock x:Name="L" Height="17.152" Canvas.Left="326" TextWrapping="Wrap" Text="L" Canvas.Top="276" Width="10.118"/>
+        <TextBlock x:Name="K" Height="17.152" Canvas.Left="283" TextWrapping="Wrap" Text="K" Canvas.Top="281" Width="10.118"/>
+        <TextBlock x:Name="J" Height="17.152" Canvas.Left="239" TextWrapping="Wrap" Text="J" Canvas.Top="285" Width="10.118"/>
+        <TextBlock x:Name="instructions"  Height="30" Canvas.Left="10" TextWrapping="NoWrap" Canvas.Top="61" Width="220" FontSize="25"
+                   Loaded="instructions_Loaded" />
+        <Button x:Name="perfect" Content="Perfect Inputs" Width="85" Canvas.Left="367" Canvas.Top="262.04" Click="perfect_Click" ClickMode="Release"/>
+        <Button x:Name="guideButton" Content="Move Guide" Width="85" Canvas.Left="367" Canvas.Top="230.05" Click="guideButton_Click" />
+        <TextBlock x:Name="inputMode" Height="20" Canvas.Left="12" TextWrapping="Wrap" Text="Standard" FontSize="10" Canvas.Top="278.16" Width="47"/>
+        <TextBlock x:Name="moveName" Height="18" Canvas.Left="12" TextWrapping="Wrap" Text=" " FontSize="14" Canvas.Top="43" Width="160"/>
     </Canvas>
 </Window>

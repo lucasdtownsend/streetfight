@@ -50,6 +50,10 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WpfAnimatedGif, Version=1.4.13.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WpfAnimatedGif.1.4.13\lib\net\WpfAnimatedGif.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -87,11 +91,13 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <None Include="ryu\f-hp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -112,6 +118,456 @@
   <ItemGroup>
     <Resource Include="ryu\jumpb.gif" />
     <Resource Include="ryu\jumpf.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryu\punchl.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryu\punchh.gif" />
+    <Resource Include="ryu\punchm.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryu\kickh.gif" />
+    <Resource Include="ryu\kickl.gif" />
+    <Resource Include="ryu\kickm.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryu\crouchhk.gif" />
+    <Resource Include="ryu\crouchhp.gif" />
+    <Resource Include="ryu\crouchlk.gif" />
+    <Resource Include="ryu\crouchlp.gif" />
+    <Resource Include="ryu\crouchmk.gif" />
+    <Resource Include="ryu\crouchmp.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryu\airhk.gif" />
+    <Resource Include="ryu\airhp.gif" />
+    <Resource Include="ryu\airlk.gif" />
+    <Resource Include="ryu\airlp.gif" />
+    <Resource Include="ryu\airmk.gif" />
+    <Resource Include="ryu\airmp.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryu\walkf\tmp-0.gif" />
+    <Resource Include="ryu\walkf\tmp-1.gif" />
+    <Resource Include="ryu\walkf\tmp-10.gif" />
+    <Resource Include="ryu\walkf\tmp-2.gif" />
+    <Resource Include="ryu\walkf\tmp-3.gif" />
+    <Resource Include="ryu\walkf\tmp-4.gif" />
+    <Resource Include="ryu\walkf\tmp-5.gif" />
+    <Resource Include="ryu\walkf\tmp-6.gif" />
+    <Resource Include="ryu\walkf\tmp-7.gif" />
+    <Resource Include="ryu\walkf\tmp-8.gif" />
+    <Resource Include="ryu\walkf\tmp-9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryu\walkb\tmp-0.gif" />
+    <Resource Include="ryu\walkb\tmp-1.gif" />
+    <Resource Include="ryu\walkb\tmp-10.gif" />
+    <Resource Include="ryu\walkb\tmp-2.gif" />
+    <Resource Include="ryu\walkb\tmp-3.gif" />
+    <Resource Include="ryu\walkb\tmp-4.gif" />
+    <Resource Include="ryu\walkb\tmp-5.gif" />
+    <Resource Include="ryu\walkb\tmp-6.gif" />
+    <Resource Include="ryu\walkb\tmp-7.gif" />
+    <Resource Include="ryu\walkb\tmp-8.gif" />
+    <Resource Include="ryu\walkb\tmp-9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryu\stance\tmp-0.gif" />
+    <Resource Include="ryu\stance\tmp-1.gif" />
+    <Resource Include="ryu\stance\tmp-2.gif" />
+    <Resource Include="ryu\stance\tmp-3.gif" />
+    <Resource Include="ryu\stance\tmp-4.gif" />
+    <Resource Include="ryu\stance\tmp-5.gif" />
+    <Resource Include="ryu\stance\tmp-6.gif" />
+    <Resource Include="ryu\stance\tmp-7.gif" />
+    <Resource Include="ryu\stance\tmp-8.gif" />
+    <Resource Include="ryu\stance\tmp-9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryu\standlp\tmp-0.gif" />
+    <Resource Include="ryu\standlp\tmp-1.gif" />
+    <Resource Include="ryu\standlp\tmp-2.gif" />
+    <Resource Include="ryu\standlp\tmp-3.gif" />
+    <Resource Include="ryu\standlp\tmp-4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryu\standmp\tmp-0.gif" />
+    <Resource Include="ryu\standmp\tmp-1.gif" />
+    <Resource Include="ryu\standmp\tmp-2.gif" />
+    <Resource Include="ryu\standmp\tmp-3.gif" />
+    <Resource Include="ryu\standmp\tmp-4.gif" />
+    <Resource Include="ryu\standmp\tmp-5.gif" />
+    <Resource Include="ryu\standmp\tmp-6.gif" />
+    <Resource Include="ryu\standmp\tmp-7.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryu\standhp\tmp-0.gif" />
+    <Resource Include="ryu\standhp\tmp-1.gif" />
+    <Resource Include="ryu\standhp\tmp-10.gif" />
+    <Resource Include="ryu\standhp\tmp-11.gif" />
+    <Resource Include="ryu\standhp\tmp-2.gif" />
+    <Resource Include="ryu\standhp\tmp-3.gif" />
+    <Resource Include="ryu\standhp\tmp-4.gif" />
+    <Resource Include="ryu\standhp\tmp-5.gif" />
+    <Resource Include="ryu\standhp\tmp-6.gif" />
+    <Resource Include="ryu\standhp\tmp-7.gif" />
+    <Resource Include="ryu\standhp\tmp-8.gif" />
+    <Resource Include="ryu\standhp\tmp-9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryu\standlk\tmp-0.gif" />
+    <Resource Include="ryu\standlk\tmp-1.gif" />
+    <Resource Include="ryu\standlk\tmp-2.gif" />
+    <Resource Include="ryu\standlk\tmp-3.gif" />
+    <Resource Include="ryu\standlk\tmp-4.gif" />
+    <Resource Include="ryu\standlk\tmp-5.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryu\standmk\tmp-0.gif" />
+    <Resource Include="ryu\standmk\tmp-1.gif" />
+    <Resource Include="ryu\standmk\tmp-2.gif" />
+    <Resource Include="ryu\standmk\tmp-3.gif" />
+    <Resource Include="ryu\standmk\tmp-4.gif" />
+    <Resource Include="ryu\standmk\tmp-5.gif" />
+    <Resource Include="ryu\standmk\tmp-6.gif" />
+    <Resource Include="ryu\standmk\tmp-7.gif" />
+    <Resource Include="ryu\standmk\tmp-8.gif" />
+    <Resource Include="ryu\standmk\tmp-9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryu\standhk\tmp-0.gif" />
+    <Resource Include="ryu\standhk\tmp-1.gif" />
+    <Resource Include="ryu\standhk\tmp-10.gif" />
+    <Resource Include="ryu\standhk\tmp-11.gif" />
+    <Resource Include="ryu\standhk\tmp-12.gif" />
+    <Resource Include="ryu\standhk\tmp-13.gif" />
+    <Resource Include="ryu\standhk\tmp-14.gif" />
+    <Resource Include="ryu\standhk\tmp-2.gif" />
+    <Resource Include="ryu\standhk\tmp-3.gif" />
+    <Resource Include="ryu\standhk\tmp-4.gif" />
+    <Resource Include="ryu\standhk\tmp-5.gif" />
+    <Resource Include="ryu\standhk\tmp-6.gif" />
+    <Resource Include="ryu\standhk\tmp-7.gif" />
+    <Resource Include="ryu\standhk\tmp-8.gif" />
+    <Resource Include="ryu\standhk\tmp-9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryu\crouch\tmp-0.gif" />
+    <Resource Include="ryu\crouch\tmp-1.gif" />
+    <Resource Include="ryu\crouch\tmp-2.gif" />
+    <Resource Include="ryu\crouch\tmp-3.gif" />
+    <Resource Include="ryu\crouch\tmp-4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryu\crouchlp\tmp-0.gif" />
+    <Resource Include="ryu\crouchlp\tmp-1.gif" />
+    <Resource Include="ryu\crouchlp\tmp-2.gif" />
+    <Resource Include="ryu\crouchlp\tmp-3.gif" />
+    <Resource Include="ryu\crouchlp\tmp-4.gif" />
+    <Resource Include="ryu\crouchlp\tmp-5.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryu\crouchmp\tmp-0.gif" />
+    <Resource Include="ryu\crouchmp\tmp-1.gif" />
+    <Resource Include="ryu\crouchmp\tmp-2.gif" />
+    <Resource Include="ryu\crouchmp\tmp-3.gif" />
+    <Resource Include="ryu\crouchmp\tmp-4.gif" />
+    <Resource Include="ryu\crouchmp\tmp-5.gif" />
+    <Resource Include="ryu\crouchmp\tmp-6.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryu\crouchhp\tmp-0.gif" />
+    <Resource Include="ryu\crouchhp\tmp-1.gif" />
+    <Resource Include="ryu\crouchhp\tmp-10.gif" />
+    <Resource Include="ryu\crouchhp\tmp-2.gif" />
+    <Resource Include="ryu\crouchhp\tmp-3.gif" />
+    <Resource Include="ryu\crouchhp\tmp-4.gif" />
+    <Resource Include="ryu\crouchhp\tmp-5.gif" />
+    <Resource Include="ryu\crouchhp\tmp-6.gif" />
+    <Resource Include="ryu\crouchhp\tmp-7.gif" />
+    <Resource Include="ryu\crouchhp\tmp-8.gif" />
+    <Resource Include="ryu\crouchhp\tmp-9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryu\crouchlk\tmp-0.gif" />
+    <Resource Include="ryu\crouchlk\tmp-1.gif" />
+    <Resource Include="ryu\crouchlk\tmp-2.gif" />
+    <Resource Include="ryu\crouchlk\tmp-3.gif" />
+    <Resource Include="ryu\crouchlk\tmp-4.gif" />
+    <Resource Include="ryu\crouchlk\tmp-5.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryu\crouchmk\tmp-0.gif" />
+    <Resource Include="ryu\crouchmk\tmp-1.gif" />
+    <Resource Include="ryu\crouchmk\tmp-2.gif" />
+    <Resource Include="ryu\crouchmk\tmp-3.gif" />
+    <Resource Include="ryu\crouchmk\tmp-4.gif" />
+    <Resource Include="ryu\crouchmk\tmp-5.gif" />
+    <Resource Include="ryu\crouchmk\tmp-6.gif" />
+    <Resource Include="ryu\crouchmk\tmp-7.gif" />
+    <Resource Include="ryu\crouchmk\tmp-8.gif" />
+    <Resource Include="ryu\crouchmk\tmp-9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryu\crouchhk\tmp-0.gif" />
+    <Resource Include="ryu\crouchhk\tmp-1.gif" />
+    <Resource Include="ryu\crouchhk\tmp-10.gif" />
+    <Resource Include="ryu\crouchhk\tmp-11.gif" />
+    <Resource Include="ryu\crouchhk\tmp-2.gif" />
+    <Resource Include="ryu\crouchhk\tmp-3.gif" />
+    <Resource Include="ryu\crouchhk\tmp-4.gif" />
+    <Resource Include="ryu\crouchhk\tmp-5.gif" />
+    <Resource Include="ryu\crouchhk\tmp-6.gif" />
+    <Resource Include="ryu\crouchhk\tmp-7.gif" />
+    <Resource Include="ryu\crouchhk\tmp-8.gif" />
+    <Resource Include="ryu\crouchhk\tmp-9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryu\jumpn\tmp-0.gif" />
+    <Resource Include="ryu\jumpn\tmp-1.gif" />
+    <Resource Include="ryu\jumpn\tmp-10.gif" />
+    <Resource Include="ryu\jumpn\tmp-11.gif" />
+    <Resource Include="ryu\jumpn\tmp-12.gif" />
+    <Resource Include="ryu\jumpn\tmp-13.gif" />
+    <Resource Include="ryu\jumpn\tmp-14.gif" />
+    <Resource Include="ryu\jumpn\tmp-15.gif" />
+    <Resource Include="ryu\jumpn\tmp-16.gif" />
+    <Resource Include="ryu\jumpn\tmp-17.gif" />
+    <Resource Include="ryu\jumpn\tmp-18.gif" />
+    <Resource Include="ryu\jumpn\tmp-19.gif" />
+    <Resource Include="ryu\jumpn\tmp-2.gif" />
+    <Resource Include="ryu\jumpn\tmp-3.gif" />
+    <Resource Include="ryu\jumpn\tmp-4.gif" />
+    <Resource Include="ryu\jumpn\tmp-5.gif" />
+    <Resource Include="ryu\jumpn\tmp-6.gif" />
+    <Resource Include="ryu\jumpn\tmp-7.gif" />
+    <Resource Include="ryu\jumpn\tmp-8.gif" />
+    <Resource Include="ryu\jumpn\tmp-9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryu\jumpf\tmp-0.gif" />
+    <Resource Include="ryu\jumpf\tmp-1.gif" />
+    <Resource Include="ryu\jumpf\tmp-10.gif" />
+    <Resource Include="ryu\jumpf\tmp-11.gif" />
+    <Resource Include="ryu\jumpf\tmp-12.gif" />
+    <Resource Include="ryu\jumpf\tmp-13.gif" />
+    <Resource Include="ryu\jumpf\tmp-14.gif" />
+    <Resource Include="ryu\jumpf\tmp-15.gif" />
+    <Resource Include="ryu\jumpf\tmp-16.gif" />
+    <Resource Include="ryu\jumpf\tmp-17.gif" />
+    <Resource Include="ryu\jumpf\tmp-18.gif" />
+    <Resource Include="ryu\jumpf\tmp-19.gif" />
+    <Resource Include="ryu\jumpf\tmp-2.gif" />
+    <Resource Include="ryu\jumpf\tmp-20.gif" />
+    <Resource Include="ryu\jumpf\tmp-3.gif" />
+    <Resource Include="ryu\jumpf\tmp-4.gif" />
+    <Resource Include="ryu\jumpf\tmp-5.gif" />
+    <Resource Include="ryu\jumpf\tmp-6.gif" />
+    <Resource Include="ryu\jumpf\tmp-7.gif" />
+    <Resource Include="ryu\jumpf\tmp-8.gif" />
+    <Resource Include="ryu\jumpf\tmp-9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryu\jumpb\tmp-0.gif" />
+    <Resource Include="ryu\jumpb\tmp-1.gif" />
+    <Resource Include="ryu\jumpb\tmp-10.gif" />
+    <Resource Include="ryu\jumpb\tmp-11.gif" />
+    <Resource Include="ryu\jumpb\tmp-12.gif" />
+    <Resource Include="ryu\jumpb\tmp-13.gif" />
+    <Resource Include="ryu\jumpb\tmp-14.gif" />
+    <Resource Include="ryu\jumpb\tmp-15.gif" />
+    <Resource Include="ryu\jumpb\tmp-16.gif" />
+    <Resource Include="ryu\jumpb\tmp-17.gif" />
+    <Resource Include="ryu\jumpb\tmp-18.gif" />
+    <Resource Include="ryu\jumpb\tmp-19.gif" />
+    <Resource Include="ryu\jumpb\tmp-2.gif" />
+    <Resource Include="ryu\jumpb\tmp-20.gif" />
+    <Resource Include="ryu\jumpb\tmp-21.gif" />
+    <Resource Include="ryu\jumpb\tmp-3.gif" />
+    <Resource Include="ryu\jumpb\tmp-4.gif" />
+    <Resource Include="ryu\jumpb\tmp-5.gif" />
+    <Resource Include="ryu\jumpb\tmp-6.gif" />
+    <Resource Include="ryu\jumpb\tmp-7.gif" />
+    <Resource Include="ryu\jumpb\tmp-8.gif" />
+    <Resource Include="ryu\jumpb\tmp-9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryu\hadoken.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryu\hadoken\tmp-0.gif" />
+    <Resource Include="ryu\hadoken\tmp-1.gif" />
+    <Resource Include="ryu\hadoken\tmp-10.gif" />
+    <Resource Include="ryu\hadoken\tmp-11.gif" />
+    <Resource Include="ryu\hadoken\tmp-12.gif" />
+    <Resource Include="ryu\hadoken\tmp-13.gif" />
+    <Resource Include="ryu\hadoken\tmp-2.gif" />
+    <Resource Include="ryu\hadoken\tmp-3.gif" />
+    <Resource Include="ryu\hadoken\tmp-4.gif" />
+    <Resource Include="ryu\hadoken\tmp-5.gif" />
+    <Resource Include="ryu\hadoken\tmp-6.gif" />
+    <Resource Include="ryu\hadoken\tmp-7.gif" />
+    <Resource Include="ryu\hadoken\tmp-8.gif" />
+    <Resource Include="ryu\hadoken\tmp-9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryu\shoryu\tmp-0.gif" />
+    <Resource Include="ryu\shoryu\tmp-1.gif" />
+    <Resource Include="ryu\shoryu\tmp-10.gif" />
+    <Resource Include="ryu\shoryu\tmp-11.gif" />
+    <Resource Include="ryu\shoryu\tmp-12.gif" />
+    <Resource Include="ryu\shoryu\tmp-13.gif" />
+    <Resource Include="ryu\shoryu\tmp-14.gif" />
+    <Resource Include="ryu\shoryu\tmp-15.gif" />
+    <Resource Include="ryu\shoryu\tmp-16.gif" />
+    <Resource Include="ryu\shoryu\tmp-2.gif" />
+    <Resource Include="ryu\shoryu\tmp-3.gif" />
+    <Resource Include="ryu\shoryu\tmp-4.gif" />
+    <Resource Include="ryu\shoryu\tmp-5.gif" />
+    <Resource Include="ryu\shoryu\tmp-6.gif" />
+    <Resource Include="ryu\shoryu\tmp-7.gif" />
+    <Resource Include="ryu\shoryu\tmp-8.gif" />
+    <Resource Include="ryu\shoryu\tmp-9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryu\tatsu\tmp-0.gif" />
+    <Resource Include="ryu\tatsu\tmp-1.gif" />
+    <Resource Include="ryu\tatsu\tmp-10.gif" />
+    <Resource Include="ryu\tatsu\tmp-11.gif" />
+    <Resource Include="ryu\tatsu\tmp-12.gif" />
+    <Resource Include="ryu\tatsu\tmp-13.gif" />
+    <Resource Include="ryu\tatsu\tmp-14.gif" />
+    <Resource Include="ryu\tatsu\tmp-15.gif" />
+    <Resource Include="ryu\tatsu\tmp-16.gif" />
+    <Resource Include="ryu\tatsu\tmp-17.gif" />
+    <Resource Include="ryu\tatsu\tmp-18.gif" />
+    <Resource Include="ryu\tatsu\tmp-19.gif" />
+    <Resource Include="ryu\tatsu\tmp-2.gif" />
+    <Resource Include="ryu\tatsu\tmp-20.gif" />
+    <Resource Include="ryu\tatsu\tmp-21.gif" />
+    <Resource Include="ryu\tatsu\tmp-22.gif" />
+    <Resource Include="ryu\tatsu\tmp-23.gif" />
+    <Resource Include="ryu\tatsu\tmp-24.gif" />
+    <Resource Include="ryu\tatsu\tmp-25.gif" />
+    <Resource Include="ryu\tatsu\tmp-26.gif" />
+    <Resource Include="ryu\tatsu\tmp-3.gif" />
+    <Resource Include="ryu\tatsu\tmp-4.gif" />
+    <Resource Include="ryu\tatsu\tmp-5.gif" />
+    <Resource Include="ryu\tatsu\tmp-6.gif" />
+    <Resource Include="ryu\tatsu\tmp-7.gif" />
+    <Resource Include="ryu\tatsu\tmp-8.gif" />
+    <Resource Include="ryu\tatsu\tmp-9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryu\f-mp\tmp-0.gif" />
+    <Resource Include="ryu\f-mp\tmp-1.gif" />
+    <Resource Include="ryu\f-mp\tmp-10.gif" />
+    <Resource Include="ryu\f-mp\tmp-2.gif" />
+    <Resource Include="ryu\f-mp\tmp-3.gif" />
+    <Resource Include="ryu\f-mp\tmp-4.gif" />
+    <Resource Include="ryu\f-mp\tmp-5.gif" />
+    <Resource Include="ryu\f-mp\tmp-6.gif" />
+    <Resource Include="ryu\f-mp\tmp-7.gif" />
+    <Resource Include="ryu\f-mp\tmp-8.gif" />
+    <Resource Include="ryu\f-mp\tmp-9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryu\taunt\tmp-0.gif" />
+    <Resource Include="ryu\taunt\tmp-1.gif" />
+    <Resource Include="ryu\taunt\tmp-10.gif" />
+    <Resource Include="ryu\taunt\tmp-11.gif" />
+    <Resource Include="ryu\taunt\tmp-12.gif" />
+    <Resource Include="ryu\taunt\tmp-13.gif" />
+    <Resource Include="ryu\taunt\tmp-14.gif" />
+    <Resource Include="ryu\taunt\tmp-15.gif" />
+    <Resource Include="ryu\taunt\tmp-16.gif" />
+    <Resource Include="ryu\taunt\tmp-17.gif" />
+    <Resource Include="ryu\taunt\tmp-18.gif" />
+    <Resource Include="ryu\taunt\tmp-2.gif" />
+    <Resource Include="ryu\taunt\tmp-3.gif" />
+    <Resource Include="ryu\taunt\tmp-4.gif" />
+    <Resource Include="ryu\taunt\tmp-5.gif" />
+    <Resource Include="ryu\taunt\tmp-6.gif" />
+    <Resource Include="ryu\taunt\tmp-7.gif" />
+    <Resource Include="ryu\taunt\tmp-8.gif" />
+    <Resource Include="ryu\taunt\tmp-9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryu\forwardhp\tmp-0.gif" />
+    <Resource Include="ryu\forwardhp\tmp-1.gif" />
+    <Resource Include="ryu\forwardhp\tmp-10.gif" />
+    <Resource Include="ryu\forwardhp\tmp-11.gif" />
+    <Resource Include="ryu\forwardhp\tmp-12.gif" />
+    <Resource Include="ryu\forwardhp\tmp-13.gif" />
+    <Resource Include="ryu\forwardhp\tmp-14.gif" />
+    <Resource Include="ryu\forwardhp\tmp-2.gif" />
+    <Resource Include="ryu\forwardhp\tmp-3.gif" />
+    <Resource Include="ryu\forwardhp\tmp-4.gif" />
+    <Resource Include="ryu\forwardhp\tmp-5.gif" />
+    <Resource Include="ryu\forwardhp\tmp-6.gif" />
+    <Resource Include="ryu\forwardhp\tmp-7.gif" />
+    <Resource Include="ryu\forwardhp\tmp-8.gif" />
+    <Resource Include="ryu\forwardhp\tmp-9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryu\crouching\tmp-0.gif" />
+    <Resource Include="ryu\crouching\tmp-1.gif" />
+    <Resource Include="ryu\crouching\tmp-10.gif" />
+    <Resource Include="ryu\crouching\tmp-11.gif" />
+    <Resource Include="ryu\crouching\tmp-2.gif" />
+    <Resource Include="ryu\crouching\tmp-3.gif" />
+    <Resource Include="ryu\crouching\tmp-4.gif" />
+    <Resource Include="ryu\crouching\tmp-5.gif" />
+    <Resource Include="ryu\crouching\tmp-6.gif" />
+    <Resource Include="ryu\crouching\tmp-7.gif" />
+    <Resource Include="ryu\crouching\tmp-8.gif" />
+    <Resource Include="ryu\crouching\tmp-9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryu\stepkick\tmp-0.gif" />
+    <Resource Include="ryu\stepkick\tmp-1.gif" />
+    <Resource Include="ryu\stepkick\tmp-10.gif" />
+    <Resource Include="ryu\stepkick\tmp-11.gif" />
+    <Resource Include="ryu\stepkick\tmp-12.gif" />
+    <Resource Include="ryu\stepkick\tmp-13.gif" />
+    <Resource Include="ryu\stepkick\tmp-14.gif" />
+    <Resource Include="ryu\stepkick\tmp-2.gif" />
+    <Resource Include="ryu\stepkick\tmp-3.gif" />
+    <Resource Include="ryu\stepkick\tmp-4.gif" />
+    <Resource Include="ryu\stepkick\tmp-5.gif" />
+    <Resource Include="ryu\stepkick\tmp-6.gif" />
+    <Resource Include="ryu\stepkick\tmp-7.gif" />
+    <Resource Include="ryu\stepkick\tmp-8.gif" />
+    <Resource Include="ryu\stepkick\tmp-9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="q\qstance.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="q\stand\tmp-0.gif" />
+    <Resource Include="q\stand\tmp-1.gif" />
+    <Resource Include="q\stand\tmp-10.gif" />
+    <Resource Include="q\stand\tmp-11.gif" />
+    <Resource Include="q\stand\tmp-12.gif" />
+    <Resource Include="q\stand\tmp-13.gif" />
+    <Resource Include="q\stand\tmp-14.gif" />
+    <Resource Include="q\stand\tmp-15.gif" />
+    <Resource Include="q\stand\tmp-16.gif" />
+    <Resource Include="q\stand\tmp-17.gif" />
+    <Resource Include="q\stand\tmp-18.gif" />
+    <Resource Include="q\stand\tmp-19.gif" />
+    <Resource Include="q\stand\tmp-2.gif" />
+    <Resource Include="q\stand\tmp-20.gif" />
+    <Resource Include="q\stand\tmp-21.gif" />
+    <Resource Include="q\stand\tmp-3.gif" />
+    <Resource Include="q\stand\tmp-4.gif" />
+    <Resource Include="q\stand\tmp-5.gif" />
+    <Resource Include="q\stand\tmp-6.gif" />
+    <Resource Include="q\stand\tmp-7.gif" />
+    <Resource Include="q\stand\tmp-8.gif" />
+    <Resource Include="q\stand\tmp-9.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
