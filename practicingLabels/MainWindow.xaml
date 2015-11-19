@@ -2758,6 +2758,567 @@
                 </DiscreteObjectKeyFrame>
             </ObjectAnimationUsingKeyFrames>
         </Storyboard>
+        <Storyboard x:Key="standHit">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu\standhit\tmp-0.gif"/>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standhit/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standhit/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standhit/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-52"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="chunStand">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="chun"
+    RepeatBehavior="Forever"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/stance/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/stance/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/stance/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/stance/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/stance/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/stance/tmp-5.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/stance/tmp-6.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.7">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/stance/tmp-7.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.8">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/stance/tmp-8.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.9">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/stance/tmp-9.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/stance/tmp-10.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/stance/tmp-11.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/stance/tmp-12.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/stance/tmp-13.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/stance/tmp-14.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/stance/tmp-15.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.6">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/stance/tmp-16.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.7">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/stance/tmp-17.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.8">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/stance/tmp-18.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.9">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/stance/tmp-19.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="chun">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-252"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="chun">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="chunWalkf">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="chun"
+                Completed="chunWalkf_Completed"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/walkf/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/walkf/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/walkf/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/walkf/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/walkf/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.25">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/walkf/tmp-5.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/walkf/tmp-6.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.35">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/walkf/tmp-7.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/walkf/tmp-8.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.45">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/walkf/tmp-9.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/walkf/tmp-10.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.55">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/walkf/tmp-11.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/walkf/tmp-12.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.65">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/walkf/tmp-13.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.7">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/walkf/tmp-14.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.75">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/walkf/tmp-15.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.8">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/walkf/tmp-16.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.85">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/walkf/tmp-17.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.9">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/walkf/tmp-18.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.95">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/walkf/tmp-19.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/walkf/tmp-20.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/walkf/tmp-21.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/walkf/tmp-22.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/walkf/tmp-23.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/walkf/tmp-24.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.25">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/walkf/tmp-25.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/walkf/tmp-26.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.35">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/walkf/tmp-27.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/walkf/tmp-28.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.45">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/walkf/tmp-29.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/walkf/tmp-30.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.55">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/walkf/tmp-31.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="chun">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="-227"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="chun">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="-2"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="chunTaunt">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="chun"
+                Completed="chunTaunt_Completed"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/taunt/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/taunt/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/taunt/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/taunt/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/taunt/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.25">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/taunt/tmp-5.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/taunt/tmp-6.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.35">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/taunt/tmp-7.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/taunt/tmp-8.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.45">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/taunt/tmp-9.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/taunt/tmp-10.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.55">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/taunt/tmp-11.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/taunt/tmp-12.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.65">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/taunt/tmp-13.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.7">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/taunt/tmp-14.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.75">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/taunt/tmp-15.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.8">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/taunt/tmp-16.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.85">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/taunt/tmp-17.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.9">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/taunt/tmp-18.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.95">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/taunt/tmp-36.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/taunt/tmp-37.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/taunt/tmp-38.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/taunt/tmp-39.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/taunt/tmp-40.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/taunt/tmp-41.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:1.25">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/taunt/tmp-42.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="chun">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-229"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="chun">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-14"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="chunMK">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="chun"
+                Completed="chunMK_Completed"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/MK/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/MK/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/MK/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/MK/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/MK/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.25">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/MK/tmp-5.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/MK/tmp-6.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.35">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/MK/tmp-7.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/MK/tmp-8.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.45">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/MK/tmp-9.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/MK/tmp-10.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.55">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/MK/tmp-11.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.6">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/MK/tmp-12.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.65">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/MK/tmp-13.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.7">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/MK/tmp-14.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.75">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/MK/tmp-15.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="chun">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-232"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="chun">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-20"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
     </Window.Resources>
     <Window.Triggers>
         <EventTrigger RoutedEvent="UIElement.MouseLeftButtonUp" SourceName="joystick">
@@ -2940,10 +3501,10 @@
                 </TransformGroup>
             </Ellipse.RenderTransform>
         </Ellipse>
-        <TextBlock x:Name="inputs" Height="30" Canvas.Left="10" TextWrapping="NoWrap" Text="......." Canvas.Top="10" Width="431" FontFamily="SFInputs"  FontSize="25"
+        <TextBlock x:Name="inputs" Height="30" Canvas.Left="10" TextWrapping="NoWrap" Text="inputs:" Canvas.Top="10" Width="431" FontFamily="SFInputs"  FontSize="25"
                    Loaded="inputs_Loaded"/>
         <Image x:Name="image" 
-               gif:ImageBehavior.AnimatedSource="ryu/stance.gif" Canvas.Left="139" Canvas.Top="86.798" RenderTransformOrigin="0.5,0.5">
+               Source="ryu/stance/tmp-0.gif" Canvas.Left="139" Canvas.Top="86.798" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup x:Name="transformGroup">
                     <ScaleTransform/>
@@ -2953,13 +3514,27 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <Image x:Name="q" 
-               Source="q/stand/tmp-0.gif" Canvas.Left="568" Canvas.Top="69">
+        <Image x:Name="chun" 
+               Source="chun/stance/tmp-0.gif" Canvas.Left="573" Canvas.Top="95">
             <Image.RenderTransform>
-                <ScaleTransform ScaleX="-1"/>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <TextBlock x:Name="move" Height="100" Canvas.Left="235" TextWrapping="Wrap" FontSize="25" Canvas.Top="45" Width="235"/>
+        <TextBlock x:Name="move" Height="100" Canvas.Left="235" TextWrapping="Wrap" FontSize="25" Canvas.Top="45" Width="235" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+        </TextBlock>
         <TextBlock x:Name="W" Height="17.152" Canvas.Left="150.5" TextWrapping="Wrap" Text=" W" Canvas.Top="206.848" Width="24.118"/>
         <TextBlock x:Name="A" Height="15.202" Canvas.Left="115.882" TextWrapping="Wrap" Text="A" Canvas.Top="246" Width="12.118"/>
         <TextBlock x:Name="D" Height="15.202" Canvas.Left="191" TextWrapping="Wrap" Text=" D" Canvas.Top="246" Width="12.118"/>

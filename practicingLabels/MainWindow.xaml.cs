@@ -25,10 +25,12 @@ namespace practicingLabels
     {
         public StringBuilder builder;
         public bool inAnimation = false;
+        public bool opponentAnimation = false;
         public bool jumping = false;
         public bool isKeyPressed = false;
         public bool perfectInput = false;
-        public bool guide = true;
+        public bool guide = false;
+        public bool opponent = false;
         string dir = "invisible";
         public MainWindow()
         {
@@ -477,14 +479,14 @@ namespace practicingLabels
                             move.Text += "L TATSUMAKI";
                             Attack("tatsuL", 700);
                         }
-                        else if (Keyboard.IsKeyDown(Key.Right) || Keyboard.IsKeyDown(Key.D) && (inputs.Text[last - 2] == 'C') && (dir[lastDir - 4] == 'l'))
+                        else if (Keyboard.IsKeyDown(Key.Right) || Keyboard.IsKeyDown(Key.D) && (inputs.Text[last - 2] == 'C') && (dir[lastDir - 4] == 'l') && (inputs.Text[last] != '4' && inputs.Text[last] != '5' && inputs.Text[last] != '6'))
                         {
                             Storyboard overhead = this.FindResource("stepkickL") as Storyboard;
                             overhead.Begin();
                             move.Text += "L STEPKICK";
                             Attack("stepkickL", 600);
                         }
-                        else if (Keyboard.IsKeyDown(Key.Right) || Keyboard.IsKeyDown(Key.D) && (dir[lastDir - 2] == 'd' || dir[lastDir - 1] == 'd' || dir[lastDir - 3] == 'd') && (dir[lastDir - 4] == 'l' || dir[lastDir - 5] == 'l'))
+                        else if (Keyboard.IsKeyDown(Key.Right) || Keyboard.IsKeyDown(Key.D) && (dir[lastDir - 2] == 'd' || dir[lastDir - 1] == 'd' || dir[lastDir - 3] == 'd') && (dir[lastDir - 4] == 'l' || dir[lastDir - 5] == 'l') && (inputs.Text[last] != '4' && inputs.Text[last] != '5' && inputs.Text[last] != '6'))
                         {
                             if (perfectInput == false)
                             {
@@ -531,14 +533,14 @@ namespace practicingLabels
                             move.Text += "M TATSUMAKI";
                             Attack("tatsuM", 1000);
                         }
-                        else if (Keyboard.IsKeyDown(Key.Right) || Keyboard.IsKeyDown(Key.D) && (inputs.Text[last - 2] == 'C') && (dir[lastDir - 4] == 'l'))
+                        else if (Keyboard.IsKeyDown(Key.Right) || Keyboard.IsKeyDown(Key.D) && (inputs.Text[last - 2] == 'C') && (dir[lastDir - 4] == 'l') && (dir[lastDir - 4] == 'l') && (inputs.Text[last] != '4' && inputs.Text[last] != '5' && inputs.Text[last] != '6'))
                         {
                             Storyboard overhead = this.FindResource("stepkickM") as Storyboard;
                             overhead.Begin();
                             move.Text += "M STEPKICK";
                             Attack("stepkickM", 650);
                         }
-                        else if (Keyboard.IsKeyDown(Key.Right) || Keyboard.IsKeyDown(Key.D) && (dir[lastDir - 2] == 'd' || dir[lastDir - 1] == 'd' || dir[lastDir - 3] == 'd') && (dir[lastDir - 4] == 'l' || dir[lastDir - 5] == 'l'))
+                        else if (Keyboard.IsKeyDown(Key.Right) || Keyboard.IsKeyDown(Key.D) && (dir[lastDir - 2] == 'd' || dir[lastDir - 1] == 'd' || dir[lastDir - 3] == 'd') && (dir[lastDir - 4] == 'l' || dir[lastDir - 5] == 'l') && (dir[lastDir - 4] == 'l') && (inputs.Text[last] != '4' && inputs.Text[last] != '5' && inputs.Text[last] != '6'))
                         {
                             if (perfectInput == false)
                             {
@@ -591,14 +593,14 @@ namespace practicingLabels
                             showmeyourmoves.Begin();
                             Attack("taunt", 800);
                         }
-                        else if (Keyboard.IsKeyDown(Key.Right) || Keyboard.IsKeyDown(Key.D) && (inputs.Text[last - 2] == 'C') && (dir[lastDir - 4] == 'l'))
+                        else if (Keyboard.IsKeyDown(Key.Right) || Keyboard.IsKeyDown(Key.D) && (inputs.Text[last - 2] == 'C') && (dir[lastDir - 4] == 'l') && (dir[lastDir - 4] == 'l') && (inputs.Text[last] != '4' && inputs.Text[last] != '5' && inputs.Text[last] != '6'))
                         {
                             Storyboard overhead = this.FindResource("stepkick") as Storyboard;
                             overhead.Begin();
                             move.Text += "H STEPKICK";
                             Attack("stepkick", 750);
                         }
-                        else if (Keyboard.IsKeyDown(Key.Right) || Keyboard.IsKeyDown(Key.D) && (dir[lastDir - 2] == 'd' || dir[lastDir - 1] == 'd' || dir[lastDir - 3] == 'd') && (dir[lastDir - 4] == 'l' || dir[lastDir - 5] == 'l'))
+                        else if (Keyboard.IsKeyDown(Key.Right) || Keyboard.IsKeyDown(Key.D) && (dir[lastDir - 2] == 'd' || dir[lastDir - 1] == 'd' || dir[lastDir - 3] == 'd') && (dir[lastDir - 4] == 'l' || dir[lastDir - 5] == 'l') && (dir[lastDir - 4] == 'l') && (inputs.Text[last] != '4' && inputs.Text[last] != '5' && inputs.Text[last] != '6'))
                         {
                             if (perfectInput == false)
                             {
@@ -621,6 +623,23 @@ namespace practicingLabels
                             Attack("kickH", 700);
                         }
                         pressed = "6";
+                    }
+                }
+
+                if (e.Key == Key.H)
+                {
+                    if (opponentAnimation == false && opponent == true)
+                    {
+                        Storyboard chunli = this.FindResource("chunMK") as Storyboard;
+                        chunli.Begin();
+                        if (Keyboard.IsKeyDown(Key.A) || Keyboard.IsKeyDown(Key.Left))
+                        {
+                            ChunHit(900, 260, true);
+                        }
+                        else
+                        {
+                            ChunHit(900, 260, false);
+                        }
                     }
                 }
 
@@ -893,6 +912,25 @@ namespace practicingLabels
                     perfect.Content = "Perfect Inputs";
                 }
             }
+            else if (e.Key == Key.N)
+            {
+                if (opponentAnimation == false)
+                {
+                    if (opponent == false)
+                    {
+                        opponent = true;
+                        Storyboard stepIn = this.FindResource("chunWalkf") as Storyboard;
+                        stepIn.Begin();
+                        Animation(1600);
+                    }
+                    else
+                    {
+                        Storyboard taunt = this.FindResource("chunTaunt") as Storyboard;
+                        taunt.Begin();
+                        Animation(1300);
+                    }
+                }
+            }
             
 
             string theList = AddToList(pressed);
@@ -972,7 +1010,7 @@ namespace practicingLabels
         {
             // Text block holds 22 characters.
             var block = sender as TextBlock;
-            block.Text = ".......";
+            block.Text = "inputs";
         }
         public void CleanUp()
         {
@@ -1107,6 +1145,26 @@ namespace practicingLabels
                 Storyboard stand = this.FindResource("stance") as Storyboard;
                 stand.Begin();
             }
+        }
+        public async void Animation(int ms)
+        {
+            opponentAnimation = true;
+            await Task.Delay(ms);
+            opponentAnimation = false;
+        }
+        public async void ChunHit(int attacklen, int active, bool isBlocked)
+        {
+            int remaining = attacklen - active;
+            opponentAnimation = true;
+            await Task.Delay(active);
+            if (isBlocked == false)
+            {
+                Storyboard react = this.FindResource("standHit") as Storyboard;
+                react.Begin();
+                Attack("standHit", 500);
+            }
+            await Task.Delay(remaining);
+            opponentAnimation = false;
         }
         public async void CrouchAttack(string anim, int ms)
         {
@@ -1295,6 +1353,24 @@ namespace practicingLabels
                 guide = true;
                 HowToOverhead();
             }
+        }
+
+        private void chunWalkf_Completed(object sender, EventArgs e)
+        {
+            Storyboard stand = this.FindResource("chunStand") as Storyboard;
+            stand.Begin();
+        }
+
+        private void chunTaunt_Completed(object sender, EventArgs e)
+        {
+            Storyboard stand = this.FindResource("chunStand") as Storyboard;
+            stand.Begin();
+        }
+
+        private void chunMK_Completed(object sender, EventArgs e)
+        {
+            Storyboard stand = this.FindResource("chunStand") as Storyboard;
+            stand.Begin();
         }
     }
 }
