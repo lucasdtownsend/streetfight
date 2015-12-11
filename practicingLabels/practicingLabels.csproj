@@ -711,6 +711,45 @@
     <Resource Include="ryu\standhit\tmp-8.gif" />
     <Resource Include="ryu\standhit\tmp-9.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryu\standblock\tmp-0.gif" />
+    <Resource Include="ryu\standblock\tmp-1.gif" />
+    <Resource Include="ryu\standblock\tmp-2.gif" />
+    <Resource Include="ryu\standblock\tmp-3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="chun\crouchHP\tmp-0.gif" />
+    <Resource Include="chun\crouchHP\tmp-1.gif" />
+    <Resource Include="chun\crouchHP\tmp-10.gif" />
+    <Resource Include="chun\crouchHP\tmp-2.gif" />
+    <Resource Include="chun\crouchHP\tmp-3.gif" />
+    <Resource Include="chun\crouchHP\tmp-4.gif" />
+    <Resource Include="chun\crouchHP\tmp-5.gif" />
+    <Resource Include="chun\crouchHP\tmp-6.gif" />
+    <Resource Include="chun\crouchHP\tmp-7.gif" />
+    <Resource Include="chun\crouchHP\tmp-8.gif" />
+    <Resource Include="chun\crouchHP\tmp-9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryu\lowHit\tmp-0.gif" />
+    <Resource Include="ryu\lowHit\tmp-1.gif" />
+    <Resource Include="ryu\lowHit\tmp-10.gif" />
+    <Resource Include="ryu\lowHit\tmp-2.gif" />
+    <Resource Include="ryu\lowHit\tmp-3.gif" />
+    <Resource Include="ryu\lowHit\tmp-4.gif" />
+    <Resource Include="ryu\lowHit\tmp-5.gif" />
+    <Resource Include="ryu\lowHit\tmp-6.gif" />
+    <Resource Include="ryu\lowHit\tmp-7.gif" />
+    <Resource Include="ryu\lowHit\tmp-8.gif" />
+    <Resource Include="ryu\lowHit\tmp-9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ryu\blockLow\tmp-0.gif" />
+    <Resource Include="ryu\blockLow\tmp-1.gif" />
+    <Resource Include="ryu\blockLow\tmp-2.gif" />
+    <Resource Include="ryu\blockLow\tmp-3.gif" />
+    <Resource Include="ryu\blockLow\tmp-4.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

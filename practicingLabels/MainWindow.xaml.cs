@@ -626,22 +626,37 @@ namespace practicingLabels
                     }
                 }
 
-                if (e.Key == Key.H)
+                // CHUN LI attack commands
+                if (opponentAnimation == false && opponent == true)
                 {
-                    if (opponentAnimation == false && opponent == true)
+                    if (e.Key == Key.H)
                     {
                         Storyboard chunli = this.FindResource("chunMK") as Storyboard;
                         chunli.Begin();
-                        if (Keyboard.IsKeyDown(Key.A) || Keyboard.IsKeyDown(Key.Left))
+                        if ((Keyboard.IsKeyDown(Key.A) || Keyboard.IsKeyDown(Key.Left)) && inAnimation == false)
                         {
-                            ChunHit(900, 260, true);
+                            ChunHit(900, 260, "med", true);
                         }
                         else
                         {
-                            ChunHit(900, 260, false);
+                            ChunHit(900, 260, "med", false);
+                        }
+                    }
+                    if (e.Key == Key.M)
+                    {
+                        Storyboard chunli = this.FindResource("chunLow") as Storyboard;
+                        chunli.Begin();
+                        if ((Keyboard.IsKeyDown(Key.A) || Keyboard.IsKeyDown(Key.Left)) && (Keyboard.IsKeyDown(Key.S) || Keyboard.IsKeyDown(Key.Down)) && inAnimation == false)
+                        {
+                            ChunHit(900, 260, "lo", true);
+                        }
+                        else
+                        {
+                            ChunHit(900, 260, "lo", false);
                         }
                     }
                 }
+
 
                 e.Handled = e.IsRepeat;
                 int len = inputs.Text.Length;
@@ -1152,16 +1167,40 @@ namespace practicingLabels
             await Task.Delay(ms);
             opponentAnimation = false;
         }
-        public async void ChunHit(int attacklen, int active, bool isBlocked)
+        public async void ChunHit(int attacklen, int active, string zone, bool isBlocked)
         {
             int remaining = attacklen - active;
             opponentAnimation = true;
             await Task.Delay(active);
-            if (isBlocked == false)
+            if (zone == "med")
             {
-                Storyboard react = this.FindResource("standHit") as Storyboard;
-                react.Begin();
-                Attack("standHit", 500);
+                if (isBlocked == false)
+                {
+                    Storyboard react = this.FindResource("standHit") as Storyboard;
+                    react.Begin();
+                    Attack("standHit", 500);
+                }
+                else
+                {
+                    Storyboard react = this.FindResource("standBlock") as Storyboard;
+                    react.Begin();
+                    Attack("standBlock", 500);
+                }
+            }
+            else if (zone == "lo")
+            {
+                if (isBlocked == false)
+                {
+                    Storyboard react = this.FindResource("standHit") as Storyboard;
+                    react.Begin();
+                    Attack("crouchHit", 500);
+                }
+                else
+                {
+                    Storyboard react = this.FindResource("standHit") as Storyboard;
+                    react.Begin();
+                    Attack("crouchBlock", 500);
+                }
             }
             await Task.Delay(remaining);
             opponentAnimation = false;

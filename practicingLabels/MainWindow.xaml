@@ -2791,6 +2791,100 @@
                 <EasingDoubleKeyFrame KeyTime="0" Value="-1"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
+        <Storyboard x:Key="standBlock">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu\standblock\tmp-0.gif"/>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standblock/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standblock/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/standblock/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-7"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="6"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="crouchHit">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu\lowHit\tmp-0.gif"/>
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/lowHit/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/lowHit/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/lowHit/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="35"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="crouchBlock">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="image"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/blockLow/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/blockLow/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/blockLow/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="ryu/blockLow/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="38"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
         <Storyboard x:Key="chunStand">
             <ObjectAnimationUsingKeyFrames 
     BeginTime="00:00:00" 
@@ -3319,6 +3413,70 @@
                 <EasingDoubleKeyFrame KeyTime="0" Value="-20"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
+        <Storyboard x:Key="chunLow">
+            <ObjectAnimationUsingKeyFrames 
+    BeginTime="00:00:00" 
+    Storyboard.TargetName="chun"
+                Completed="chunMK_Completed"
+    Storyboard.TargetProperty="(Image.Source)">
+                <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/crouchHP/tmp-0.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.05">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/crouchHP/tmp-1.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.1">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/crouchHP/tmp-2.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.15">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/crouchHP/tmp-3.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.2">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/crouchHP/tmp-4.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.25">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/crouchHP/tmp-5.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/crouchHP/tmp-6.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.35">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/crouchHP/tmp-7.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.4">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/crouchHP/tmp-8.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.45">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/crouchHP/tmp-9.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.5">
+                    <DiscreteObjectKeyFrame.Value>
+                        <BitmapImage UriSource="chun/crouchHP/tmp-10.gif" />
+                    </DiscreteObjectKeyFrame.Value>
+                </DiscreteObjectKeyFrame>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        
     </Window.Resources>
     <Window.Triggers>
         <EventTrigger RoutedEvent="UIElement.MouseLeftButtonUp" SourceName="joystick">
